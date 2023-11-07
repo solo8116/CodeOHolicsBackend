@@ -12,4 +12,5 @@ Contributions are welcome!
 
 ## Contact
 If you want to contact me you can reach me at 
-- [Instagram](https://www.instagram.com/sarthakgargg_/)
+- [Instagram](https://www.instagram.com/dead8309_/)
+- [Discord](https://discordapp.com/users/1131656739494842468)
