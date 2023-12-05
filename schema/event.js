@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const blogSchema = mongoose.Schema(
+const eventSchema = mongoose.Schema(
   {
     author: {
       type: String,
@@ -8,20 +8,27 @@ const blogSchema = mongoose.Schema(
     },
     title: {
       type: String,
-      required: [true, "please provide the title"],
+      required: true,
     },
-    thumbNail: {
+    description: {
       type: String,
       required: true,
     },
-    content: {
+    imageUrl: {
       type: String,
       required: true,
     },
+    time: {
+      type: Date,
+      required: true,
+    },
+    joinedUsers: {
+        type:Array
+    }
   },
   {
     timestamps: true,
   }
 );
 
-module.exports = mongoose.model("blog", blogSchema);
+module.exports = mongoose.model("events", eventSchema);

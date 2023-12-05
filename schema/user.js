@@ -1,36 +1,19 @@
 const mongoose = require("mongoose");
 
-const eventSchema = mongoose.Schema(
-  {
-      title: {
-        type: String,
-        required: true,
-      },
-      discription: {
-        type: String,
-      },
-      imageUrl: {
-        type: String,
-      },
-      time: {
-        type: Date,
-      },
-    }
-);
 const userSchema = mongoose.Schema({
   email: {
     type: String,
-    unique: [true, "email already exists"],
-    required: [true, "please provide email"],
+    unique: [true,"please provide email"],
+    required: true,
   },
   name: {
     type: String,
-    required: [true, "please provied your name"],
+    required: true,
   },
-  image: {
-    type: String,
-  },
-  event: [eventSchema],
+  admin:{
+    type:Boolean,
+    default:false
+  }
 });
 
-module.exports = mongoose.model("user", userSchema);
+module.exports = mongoose.model("users", userSchema);
